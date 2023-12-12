@@ -15,7 +15,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return "'" + name + '\'' +
-                ", weight=" + weight;
+        return "'" + name + '\''
+                + ", weight=" + weight;
     }
 }
