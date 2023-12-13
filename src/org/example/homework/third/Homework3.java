@@ -3,11 +3,13 @@ package org.example.homework.third;
 import org.example.homework.third.ex1.Birch;
 import org.example.homework.third.ex1.Pine;
 import org.example.homework.third.ex1.Spruce;
+import org.example.homework.third.ex1.Tree;
 import org.example.homework.third.ex2.PhoneFactory;
 import org.example.homework.third.ex3.Pyramid1;
 import org.example.homework.third.ex4.LoterryTicket;
 import org.example.homework.third.ex5.City;
 import org.example.homework.third.ex5.House;
+import org.example.homework.third.ex5.Runner;
 
 public class Homework3 {
     public static void main(String[] args) {
@@ -33,10 +35,11 @@ public class Homework3 {
         //
         //Создать в методе ex1 сосну, березу, ель. Положить в массив.
         //Посчитать их средний возраст.
-        Pine pine = new Pine(1);
+        Pine pine = new Pine(2);
         Spruce spruce = new Spruce(2);
         Birch birch = new Birch(3);
-        double treesAvgAge = (pine.getAge() + spruce.getAge() + birch.getAge()) / 3.0;
+        Tree[] trees = {pine, spruce, birch};
+        System.out.println(Tree.countAvgAges(trees));
     }
 
     public static void ex2() {
@@ -115,14 +118,6 @@ public class Homework3 {
         //Создать два дома, создать город с массивом созданных домов
         //При получении домов из массива, и изменении данных (например замена улицы) у дома,
         //у домов внутри city ничего не поменяется. Т.е. при вызове toString, будут старые имена улицы
-        House house1 = new House("street1", 1);
-        House house2 = new House("street2", 2);
-        City city = new City("city", new House[]{house1, house2});
-        System.out.println(city);
-        house1 = city.getHouse(0);
-        house2 = city.getHouse(1);
-        house1.setNumber(5);
-        house2.setNumber(10);
-        System.out.println(city);
+        Runner.run();
     }
 }
