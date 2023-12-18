@@ -1,7 +1,6 @@
 package org.example.homework.four.ex4;
 
 import java.util.Scanner;
-
 import org.example.homework.four.ex4.Exceptions.*;
 
 public class OneGramChatTest {
