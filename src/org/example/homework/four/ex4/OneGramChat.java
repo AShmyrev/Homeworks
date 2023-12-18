@@ -56,7 +56,7 @@ public class OneGramChat {
                 case "прочитать":
                     try {
                         readAllMessages();
-                    } catch (ListOfMessagesEmptyException e) {
+                    } catch (ListOfMessagesEmptyException | IllegalOperationWhenLoggedOutException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
@@ -154,7 +154,10 @@ public class OneGramChat {
         System.out.println("Message has been sent!");
     }
 
-    private void readAllMessages() throws ListOfMessagesEmptyException {
+    private void readAllMessages() throws ListOfMessagesEmptyException, IllegalOperationWhenLoggedOutException {
+        if (currentLoggedInUser == null) {
+            throw new IllegalOperationWhenLoggedOutException();
+        }
         if (isMessagesListEmpty(currentLoggedInUser.getMessages())) {
             throw new ListOfMessagesEmptyException();
         }
