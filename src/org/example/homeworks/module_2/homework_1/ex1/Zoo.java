@@ -1,5 +1,7 @@
 package org.example.homeworks.module_2.homework_1.ex1;
 
+import java.util.LinkedList;
+
 public class Zoo <T extends Animal, D extends Animal, B extends Animal> {
     private T animal1;
     private D animal2;
