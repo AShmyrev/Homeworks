@@ -43,6 +43,6 @@ public class Homework2 {
         // Т.е. если положить Hashmap 3 детали в качестве ключа (число значение):
         // detail(Пила) - 1, detail(Молоток) - 2, detail(отвертка) - 3
         //При попытке печати map на экран: там будет последняя вставленная деталь ( detail(отвертка) )
-        RunnerDetail.run();
+//        RunnerDetail.run();
     }
 }
